@@ -1,8 +1,8 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.318);
     flex-direction: column;
     flex-wrap: wrap;
     gap: 30PX;
@@ -10,18 +10,19 @@ body{
 
 
 
-#change{
+#change {
     display: flex;
     gap: 20px;
-    
+
 }
 
-#title, #location{
+#title,
+#location {
     padding: 20px;
     border-radius: 50px;
-    
 
-    
+
+
 }
 
 button {
@@ -32,13 +33,14 @@ button {
     overflow: hidden;
     z-index: 1;
     box-shadow: 6px 6px 12px #c5c5c5,
-    -6px -6px 12px #ffffff;
+        -6px -6px 12px #ffffff;
 
 }
-button::before{
+
+button::before {
     content: "";
     width: 0;
-    height: 3cm;
+    height: 1cm;
     border-radius: 30cm;
     top: 0;
     left: 0;
@@ -47,22 +49,24 @@ button::before{
     background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
     z-index: -1;
 }
+
 button:hover::before {
     width: 9cm;
 
 }
-.styleStampa{
-background-image:linear-gradient(  to bottom,
-rgb(255 255 0 / 100%),
-rgb(0 0 255 / 100%));
-border-radius: 60px;
-margin: 10px;
-box-shadow: 2px 4px 7px white;
+
+.styleStampa {
+    background-image: linear-gradient(to bottom,
+            rgb(255 255 0 / 100%),
+            rgb(0 0 255 / 100%));
+    border-radius: 60px;
+    margin: 10px;
+    box-shadow: 2px 4px 7px white;
 }
-#styleInputs{
 
-margin: 10px;
+#styleInputs {
 
-gap: 10PX
-;
+    margin: 10px;
+
+    gap: 10PX;
 }

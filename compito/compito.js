@@ -86,30 +86,44 @@ const jobs = [
 ]
 
 const inTitle = document.getElementById("title")
-const inLocation =document.getElementById("location")
+const inLocation = document.getElementById("location")
 const button = document.getElementById("button")
 const stampa = document.getElementById("stampa")
-
-
-button.addEventListener("click", ()=>{
+const coin = document.getElementById("cion")
+ let volte= 0;
+button.addEventListener("click", () => {
   stampa.innerHTML = "";
+  
+   
   let titleValue = inTitle.value.toLowerCase()
   let locationValue = inLocation.value.toLocaleLowerCase()
-    const risultati = jobs.filter(lavoro =>
+  const risultati = jobs.filter(lavoro =>
     (titleValue === "" || lavoro.title.toLocaleLowerCase().includes(titleValue)) &&
     (locationValue === "" || lavoro.location.toLocaleLowerCase().includes(locationValue)))
-    if (risultati.length === 0) {
-      stampa.innerText = " nessun risulta trovato"
-    }
-    else{
-      risultati.forEach((risultatiTrovati) => {
-        const elementoStampa= document.createElement("div")
-        elementoStampa.innerText = `${risultatiTrovati.title} ${risultatiTrovati.location} ` 
-        elementoStampa.classList = "styleStampa"
-        stampa.appendChild(elementoStampa);
-      })
-    }
+  if (risultati.length === 0) {
+    stampa.innerText = " nessun risulta trovato"
+  }
+  else {
+    risultati.forEach((risultatiTrovati) => {
+      const elementoStampa = document.createElement("div")
+          elementoStampa.innerText = `${risultatiTrovati.title} ${risultatiTrovati.location} `
+      elementoStampa.classList = "styleStampa"
+      stampa.appendChild(elementoStampa);
+      
+    })
+  }
 
-console.log(risultati);
+  console.log(risultati);
 
 })
+
+
+button.addEventListener("click", () =>{
+  volte =jobs.length
+  
+
+
+  
+})
+
+
